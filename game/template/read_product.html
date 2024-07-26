@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center" >View Product</h1>
+    <table align="center" border="1">
+
+        <tr>
+             
+            <th>Name</th>
+            <th>update</th>
+            <th>delete</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>add to cart</th>
+        </tr>
+
+        {% for x in data %}
+
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td><a href="/read_product_detail/{{ x.id }}">{{ x.name }}</a></td>
+    
+            <td>{{x.price}}</td>
+            <td><img src="{{ x.image.url }}" alt="" width="200px" height="200px"></td>\
+            <td><a href="/update_product/{{x.id}}">update</a></td>
+            <td><a href="/delete_product/{{x.id}}">delete</a></td>
+            <td><a href="/create_cart/{{x.id}}">Add to Cart</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>

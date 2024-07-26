@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">Previous order</h1>
+
+    <table align="center" border="1">
+        <tr>
+
+            <th>Name</th>
+            <th>image</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Review</th>
+        </tr>
+
+        {% for x in data %}
+
+
+            <tr>
+                <td>{{ x.product.name }}</td>
+                <td><img src="{{ x.product.image.url }}" height="200px" width="200px"></td>
+                <td>{{ x.quantity }}</td>
+                <td>{{ x.price }}</td>
+                <td><a href="/create_review/{{ x.product.id }}">Add Review</a></td>
+            </tr>
+
+        {% endfor %}    
+
+    </table>
+</body>
+</html>

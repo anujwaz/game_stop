@@ -1,0 +1,51 @@
+terminal > open terminal .> change from powershell to the cmd
+
+1. install virtual environment 
+        
+        pip install virtualenv
+
+2. create a virtual enivornment 
+
+      virtual (env_name)
+      virtualenv env
+
+3. start the virtual enivornment
+    env\scripts\activate
+     
+     a. deactivate the virtual enivornment
+               env\scripts\deactivate
+
+4. install django module
+
+    pip install django
+
+5. create a django project
+
+   django-admin startproject (project_name)
+
+    django-admin startproject ecomm
+
+6. create a django application inside our project
+
+    cd (project_name)  -> change director to project file
+
+    python manage.py startapp (app_name)
+
+    python manage.py startapp ecommapp
+
+7. run the project
+
+    python manage.py runserver
+
+8. migration ready
+
+      python manage.py makemigrations
+
+9. migrate 
+
+    python manage.py migrate
+       
+         
+
+
+    

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">add product</h1>
+
+    <table align="center" border="1">
+        <form method="POST" enctype="multipart/form-data">
+
+            {% csrf_token %}
+            
+            <tr>
+                <th>Name</th>
+                <td><input type="text" name="name"></td>
+            </tr>
+
+            <tr>
+                <th>Description</th>
+                <td><input type="text" name="description" id=""></td>
+            </tr>
+
+            <tr>
+                <th>Manufacturer</th>
+                <td><input type="text" name="manufacturer" id=""></td>
+            </tr>
+
+            <tr>
+                <th>Category</th>
+                <td>
+                    <select name="category" id="">
+                        <option value="Fighting">Fighting</option>
+                        <option value="story">story</option>
+                        <option value="RPG">RPG</option>
+                        <option value="Battle royal">Battle royal</option>
+                        <option value="first person">first person"</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <th>quantity</th>
+                <td><input type="number" name="quantity" id=""></td>
+            </tr>
+
+            <tr>
+                <th>price</th>
+                <td><input type="number" name="price" id=""></td>
+            </tr>
+
+            <tr>
+                <th>image</th>
+                <td><input type="file" name="image"></td>
+            </tr>
+
+            <tr>
+                <th colspan="2"><input type="submit" value="sumbit"></th>
+            </tr>
+
+
+        </form>
+
+
+
+
+
+    </table>
+</body>
+</html>
